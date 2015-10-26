@@ -4,7 +4,11 @@
     "jquery": "^2.1.4"
   },
   "scripts": {
-  	"styl": "stylus -u nib -w -c -o ./public/styles/ ./dev/styles/styles.styl",
-  	"serve": "http-server ."
+    "styl": "stylus -u nib -w -c -o ./public/styles/ ./dev/styles/styles.styl",
+    "serve": "http-server .",
+    "build": "browserify ./dev/js/app.js > ./public/js/app.js"
+  },
+  "devDependencies": {
+    "browserify": "^11.2.0"
   }
 }
