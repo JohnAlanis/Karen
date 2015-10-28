@@ -2,8 +2,7 @@ html,
 body {
   background: #000;
   color: #fff;
-  margin: 0px;
-  height: 100%;
+  margin: 0 auto;
 }
 html .Header,
 body .Header {
@@ -56,11 +55,11 @@ html .Inicio,
 body .Inicio {
   background: url("../photos/FinalStock2.png") no-repeat center center;
   background-size: cover;
-  height: 100%;
+  height: 100vh;
 }
 html .QuienesSomos,
 body .QuienesSomos {
-  height: 1000px;
+  height: 100vh;
 }
 @media screen and (max-width: 767px) {
   html .Header,

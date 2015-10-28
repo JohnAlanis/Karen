@@ -1,6 +1,7 @@
 {
   "name": "Karen",
   "dependencies": {
+    "hammerjs": "^2.0.4",
     "jquery": "^2.1.4"
   },
   "scripts": {
