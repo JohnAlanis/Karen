@@ -78,6 +78,7 @@ html .Header-button {
   width: 40px;
   height: 40px;
   line-height: 30px;
+  -webkit-border-radius: 50%;
   border-radius: 50%;
   border: solid 2.5px #e81e48;
   position: fixed;
@@ -95,6 +96,7 @@ html .MainMenu {
   left: 0;
   right: 0;
   z-index: 3;
+  -webkit-box-shadow: 0px 0px 30px 0px #e61f48;
   box-shadow: 0px 0px 30px 0px #e61f48;
   font-size: 20px;
 }
@@ -122,19 +124,37 @@ html .MainMenu-link {
 body .Index,
 html .Index {
   background-image: url("../photos/FinalStock2.png");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   text-align: center;
   height: 100vh;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -o-box-orient: vertical;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  -o-box-lines: multiple;
+  -webkit-flex-flow: column wrap;
+  -ms-flex-flow: column wrap;
+  flex-flow: column wrap;
+  -webkit-box-pack: distribute;
+  -moz-box-pack: distribute;
+  -o-box-pack: distribute;
+  -ms-flex-pack: distribute;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
 }
 body .Index-welcome,
 html .Index-welcome {
-  position: absolute;
-  top: 10em;
-  right: 0px;
-  left: 0px;
-  text-align: center;
   color: #e81e48;
 }
 body .Index-slogan,
@@ -146,17 +166,13 @@ html .Index-slogan-text {
   color: #fff;
   font-size: 20px;
   border: solid 2.5px #e81e48;
+  -webkit-border-radius: 30px;
   border-radius: 30px;
   padding: 10px;
   background: rgba(0,0,0,0.5);
 }
 body .Index-scroll,
 html .Index-scroll {
-  position: absolute;
-  text-align: center;
-  right: 0px;
-  left: 0px;
-  top: 17em;
   color: #e81e48;
   font-size: 40px;
 }
@@ -169,6 +185,8 @@ html .Index-scroll-text {
 body .QuienesSomos,
 html .QuienesSomos {
   background-image: url("../photos/Stock2.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -197,15 +215,22 @@ html .QuienesSomos {
   body .MainMenu,
   html .MainMenu {
     height: auto;
+    -webkit-border-radius: 0px 0px 70px 0;
     border-radius: 0px 0px 70px 0;
     left: -200px;
+    -webkit-box-shadow: none;
     box-shadow: none;
     width: 140px;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -o-transition: 0.3s;
+    -ms-transition: 0.3s;
     transition: 0.3s;
   }
   body .MainMenu.is-active,
   html .MainMenu.is-active {
     left: 0;
+    -webkit-box-shadow: 0px 0px 30px 0px #e61f48;
     box-shadow: 0px 0px 30px 0px #e61f48;
   }
   body .MainMenu-item,
@@ -214,6 +239,7 @@ html .QuienesSomos {
   }
   body .MainMenu-item.final,
   html .MainMenu-item.final {
+    -webkit-border-radius: 0px 0px 70px 0;
     border-radius: 0px 0px 70px 0;
   }
   body .MainMenu-link,
