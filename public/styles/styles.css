@@ -153,9 +153,15 @@ html .Index {
   -webkit-justify-content: space-around;
   justify-content: space-around;
 }
-body .Index-welcome,
-html .Index-welcome {
+body .Index-soft,
+html .Index-soft {
   color: #e81e48;
+  font-size: 65px;
+  margin: 0px;
+}
+body .Index-karen,
+html .Index-karen {
+  font-size: 130px;
 }
 body .Index-slogan,
 html .Index-slogan {
