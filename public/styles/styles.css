@@ -121,6 +121,58 @@ html .MainMenu-link {
   line-height: 3em;
   padding: 0.9em 5em;
 }
+body .Footer,
+html .Footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 3;
+  font-size: 14px;
+}
+body .Footer-list,
+html .Footer-list {
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -o-box-orient: horizontal;
+  -webkit-box-lines: single;
+  -moz-box-lines: single;
+  -o-box-lines: single;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  -o-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+body .Footer-item,
+html .Footer-item {
+  padding: 0px 0px 10px 10px;
+}
+body .Footer-link,
+html .Footer-link {
+  color: #fff;
+  text-shadow: 3px 3px 3px #e61f48;
+  text-decoration: none;
+  margin: 0;
+}
+body .Footer-link-twitter,
+html .Footer-link-twitter {
+  text-decoration: none;
+  color: #fff;
+  padding: 0px 0px 0px 10px;
+}
 body .Index,
 html .Index {
   background-image: url("../photos/FinalStock2.png");
