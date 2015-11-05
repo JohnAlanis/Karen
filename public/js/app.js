@@ -7,10 +7,10 @@ QuienesSomosHeight = document.getElementById('Section2').clientHeight;
 document.getElementById('Section2').setAttribute("style","height:" + (QuienesSomosHeight + 55) + "px");
 
 ProductosHeight = document.getElementById('Section3').clientHeight;
-document.getElementById('Section3').setAttribute("style","height:" + (IndexHeight + 55) + "px");
+document.getElementById('Section3').setAttribute("style","height:" + (ProductosHeight + 55) + "px");
 
 ContactoHeight = document.getElementById('Section4').clientHeight;
-document.getElementById('Section4').setAttribute("style","height:" + (IndexHeight + 55) + "px");
+document.getElementById('Section4').setAttribute("style","height:" + (ContactoHeight + 55) + "px");
 
 
 var Hammer = require('hammerjs')
