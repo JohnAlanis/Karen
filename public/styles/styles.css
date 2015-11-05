@@ -57,6 +57,34 @@
 .icon-github:before {
   content: "\e90c";
 }
+.rslides {
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+.rslides li {
+  -webkit-backface-visibility: hidden;
+  position: absolute;
+  display: none;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+.rslides li:first-child {
+  position: relative;
+  display: block;
+  float: left;
+}
+.rslides img {
+  display: block;
+  height: auto;
+  float: left;
+  width: 100%;
+  border: 0;
+}
 body,
 html {
   background: #000;
@@ -90,12 +118,12 @@ html .Header-button {
 }
 body .MainMenu,
 html .MainMenu {
-  background: #000;
+  background: rgba(0,0,0,0.5);
   text-align: center;
   position: fixed;
   left: 0;
   right: 0;
-  z-index: 3;
+  z-index: 99;
   -webkit-box-shadow: 0px 0px 30px 0px #e61f48;
   box-shadow: 0px 0px 30px 0px #e61f48;
   font-size: 20px;
@@ -123,6 +151,7 @@ html .MainMenu-link {
 }
 body .Footer,
 html .Footer {
+  background: rgba(0,0,0,0.6);
   position: fixed;
   left: 0;
   right: 0;
@@ -158,7 +187,7 @@ html .Footer-list {
 }
 body .Footer-item,
 html .Footer-item {
-  padding: 0px 0px 10px 10px;
+  padding: 3px 0px 3px 3px;
 }
 body .Footer-link,
 html .Footer-link {
@@ -175,7 +204,7 @@ html .Footer-link-twitter {
 }
 body .Index,
 html .Index {
-  background-image: url("../photos/FinalStock2.png");
+  background-image: url("../photos/FinalStock1.png");
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -208,31 +237,36 @@ html .Index {
 body .Index-soft,
 html .Index-soft {
   color: #e81e48;
-  font-size: 65px;
+  font-size: 50px;
+  text-shadow: 3px 3px 3px #000;
   margin: 0px;
+  position: relative;
+  top: 18px;
+  left: -60px;
 }
 body .Index-karen,
 html .Index-karen {
+  color: #e81e48;
   font-size: 130px;
-}
-body .Index-slogan,
-html .Index-slogan {
-  margin-top: 30px;
+  text-shadow: 3px 3px 3px #000;
+  margin: 0;
 }
 body .Index-slogan-text,
 html .Index-slogan-text {
   color: #fff;
-  font-size: 20px;
-  border: solid 2.5px #e81e48;
+  font-size: 22px;
+  border: solid 1px #e81e48;
   -webkit-border-radius: 30px;
   border-radius: 30px;
   padding: 10px;
   background: rgba(0,0,0,0.5);
+  text-shadow: 3px 3px 3px #000;
 }
 body .Index-scroll,
 html .Index-scroll {
   color: #e81e48;
   font-size: 40px;
+  text-shadow: 3px 3px 3px #000;
 }
 body .Index-scroll-text,
 html .Index-scroll-text {
@@ -242,7 +276,7 @@ html .Index-scroll-text {
 }
 body .QuienesSomos,
 html .QuienesSomos {
-  background-image: url("../photos/Stock2.jpg");
+  background-image: url("../photos/FinalStock2.png");
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -250,8 +284,167 @@ html .QuienesSomos {
   background-position: center;
   text-align: center;
   height: 100vh;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -o-box-orient: vertical;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  -o-box-lines: multiple;
+  -webkit-flex-flow: column wrap;
+  -ms-flex-flow: column wrap;
+  flex-flow: column wrap;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -o-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+body .QuienesSomos-container,
+html .QuienesSomos-container {
+  padding: 0 25px;
+  font-size: 25px;
+}
+body .QuienesSomos-container-content,
+html .QuienesSomos-container-content {
+  padding: 20px;
+  background: rgba(0,0,0,0.6);
+  border: solid 3px #e81e48;
+  -webkit-border-radius: 30%;
+  border-radius: 30%;
+  text-shadow: 3px 3px 3px #000;
+}
+body .Productos,
+html .Productos {
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+}
+body .Productos-titulo,
+html .Productos-titulo {
+  margin: 0;
+  font-size: 42px;
+}
+body .Productos-container,
+html .Productos-container {
+  margin: 50px 0;
+  position: relative;
+  float: left;
+  width: 100%;
+}
+body .Productos .rslides,
+html .Productos .rslides {
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 300px;
+}
+body .Productos .caption,
+html .Productos .caption {
+  font-size: 25px;
+  position: absolute;
+  display: block;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  margin: 0;
+  text-align: center;
+  background: #000;
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+}
+body .Productos .rslides1_nav,
+html .Productos .rslides1_nav {
+  position: absolute;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  top: 50%;
+  left: 10%;
+  z-index: 90;
+  opacity: 0.5;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=50);
+  text-indent: -9999px;
+  overflow: hidden;
+  text-decoration: none;
+  height: 61px;
+  width: 38px;
+  background: url("http://responsiveslides.com/with-captions/themes.gif");
+  margin-top: -45px;
+}
+body .Productos .rslides1_nav.next,
+html .Productos .rslides1_nav.next {
+  left: auto;
+  background-position: right top;
+  right: 10%;
+}
+body .Contacto,
+html .Contacto {
+  background-image: url("../photos/FinalStock3.png");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+  height: 100vh;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -o-box-orient: vertical;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  -o-box-lines: multiple;
+  -webkit-flex-flow: column wrap;
+  -ms-flex-flow: column wrap;
+  flex-flow: column wrap;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -o-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+body .Contacto-container,
+html .Contacto-container {
+  font-size: 20px;
+  margin: 0 5vw;
+  padding: 20px;
+  background: rgba(0,0,0,0.6);
+  border: solid 3px #e81e48;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  text-shadow: 3px 3px 3px #000;
+}
+body .Contacto-text,
+html .Contacto-text {
+  color: #fff;
+}
+body .Contacto-text-mail a,
+html .Contacto-text-mail a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 17px;
 }
 @media screen and (max-width: 1024px) {
+  body .Index,
+  html .Index {
+    background-image: url("../photos/FinalStock1-tab.png");
+  }
   body .Index-scroll,
   html .Index-scroll {
     top: 20em;
@@ -259,6 +452,10 @@ html .QuienesSomos {
   body .MainMenu-link,
   html .MainMenu-link {
     padding: 0.9em 2em;
+  }
+  body .QuienesSomos,
+  html .QuienesSomos {
+    background-image: url("../photos/FinalStock2-tab.png");
   }
 }
 @media screen and (max-width: 767px) {
@@ -305,9 +502,21 @@ html .QuienesSomos {
     margin: 0px;
     padding: 1em 1em;
   }
+  body .Index,
+  html .Index {
+    background-image: url("../photos/FinalStock1-mov.png");
+  }
   body .Index-scroll,
   html .Index-scroll {
     top: 14em;
+  }
+  body .QuienesSomos,
+  html .QuienesSomos {
+    background-image: url("../photos/FinalStock2-mov.png");
+  }
+  body .Contacto,
+  html .Contacto {
+    background-image: url("../photos/FinalStock3-mov.png");
   }
 }
 @media screen and (max-width: 320px) {
